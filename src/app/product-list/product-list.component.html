@@ -1,13 +1,29 @@
-<ul>
+<!-- <ul>
   <li *ngFor="let product of products">
     <a routerLink="/product/{{ product.id }}" routerLinkActive="active">
       {{ product.albumName }}
     </a>
   </li>
-</ul>
+</ul> -->
 
 <!-- <a [routerLink]="['product-list']" [queryParams]="{ page: 2 }"> Go to Page 2</a>
 
 <a [routerLink]="['/products', product.id ]" routerLinkActive="active">
   {{ product.albumName }}
   </a>  -->
+
+<!-- <a [routerLink]="['/products', product.id]" routerLinkActive="active">
+  {{ product.albumName }}
+</a> -->
+
+<ul>
+  <li *ngFor="let product of products">
+    <ul>
+      <li *ngFor="let product of products">
+        <a [routerLink]="['/products', product.id]" routerLinkActive="active">
+          {{ product.albumName }}
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
